@@ -5,3 +5,4 @@ Currently contains:
 - Caesar Cipher
 - Morse Code
 - Scissors Cipher
+- Vigenere Cipher
