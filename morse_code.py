@@ -8,7 +8,7 @@ For translation of morse code to text, please choose 2
 ''')
 exit = False
 
-while exit != 'y' :
+while exit == 'y' :
   while True:
     try:
       choice = int(input("Enter 1 or 2: "))
