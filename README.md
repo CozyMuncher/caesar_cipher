@@ -1,2 +1,7 @@
-# caesar_cipher
-Code to encrypt and decrypt words using caesar cipher
+# Cryptography
+Code to encrypt and decrypt words using ciphers
+
+Currently contains:
+-Caesar Cipher
+-Morse Code
+-Scissors Cipher
