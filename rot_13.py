@@ -3,10 +3,13 @@ while True:
     decrypted_text = input("Decrypted Message:")
     encrypted_text = ""
     for char in decrypted_text:
-        index = 0
-        if (alphabet.index(char)+13) > 26:
-            index = alphabet.index(char)+13 - 26
+        if char not in alphabet:
+            encrypted_text += char
         else:
-            index = alphabet.index(char)+13
-        encrypted_text += alphabet[index]
+            index = 0
+            if (alphabet.index(char)+13) > 26:
+                index = alphabet.index(char)+13 - 26
+            else:
+                index = alphabet.index(char)+13
+            encrypted_text += alphabet[index]
     print(encrypted_text)

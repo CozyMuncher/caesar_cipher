@@ -1,11 +1,13 @@
-print("=== MORSE CODE TRANSLATOR ===")
-print('''
+"""A morse code encoder/decoder"""
+import pyfiglet
+
+pyfiglet.figlet_format('=== MORSE CODE TRANSLATOR ===')
+print(''' 
 DISCLAIMER: Only valid morse code letter will be shown in the translation
-''')
-print('''
 For translation of text to morse code, please choose 1
 For translation of morse code to text, please choose 2
 ''')
+
 exit = False
 
 while exit == 'y' :
