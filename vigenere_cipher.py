@@ -1,23 +1,26 @@
+"""A program to encrypt and decrypt a message using vigenere cipher with a given key"""
+
 while True:
-    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-    encrypted_text = ''
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+                'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    ENCRYPTED_TEXT = ''
     decrypted_text = input("Decrypted Text:").lower()
     key = input("Key:").lower()
-    iter = 0
+    ITERATION = 0
 
     for char in decrypted_text:
         if char not in alphabet:
-            encrypted_text += char
+            ENCRYPTED_TEXT += char
         else:
-            index = key[iter]
-            temp = 0
+            index = key[ITERATION]
+            TEMP_INDEX = 0
             if (alphabet.index(char)+alphabet.index(index)) > 26:
-                temp = alphabet.index(char)+alphabet.index(index) - 26
+                TEMP_INDEX = alphabet.index(char)+alphabet.index(index) - 26
             else:
-                temp = alphabet.index(char)+alphabet.index(index)
-            encrypted_text += alphabet[temp]
-            iter += 1
-            if iter > len(key)-1:
-                iter = 0
+                TEMP_INDEX = alphabet.index(char)+alphabet.index(index)
+            ENCRYPTED_TEXT += alphabet[TEMP_INDEX]
+            ITERATION += 1
+            if ITERATION > len(key)-1:
+                ITERATION = 0
 
-    print(encrypted_text)
+    print(ENCRYPTED_TEXT)
