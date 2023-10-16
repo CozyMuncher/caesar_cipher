@@ -1,15 +1,18 @@
+"""A program to encrypt or decrypt a message uing ROT-13"""
+
 while True:
-    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-    decrypted_text = input("Decrypted Message:")
-    encrypted_text = ""
-    for char in decrypted_text:
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+                'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    DECRYPTED_TEXT = input("Decrypted Message:")
+    ENCRYPTED_TEXT = ""
+    for char in DECRYPTED_TEXT:
         if char not in alphabet:
-            encrypted_text += char
+            ENCRYPTED_TEXT += char
         else:
-            index = 0
+            INDEX = 0
             if (alphabet.index(char)+13) > 26:
                 index = alphabet.index(char)+13 - 26
             else:
                 index = alphabet.index(char)+13
-            encrypted_text += alphabet[index]
-    print(encrypted_text)
+            ENCRYPTED_TEXT += alphabet[INDEX]
+    print(ENCRYPTED_TEXT)
