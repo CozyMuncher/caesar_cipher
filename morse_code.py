@@ -18,7 +18,6 @@ EXIT_STATUS = False
 # Ignore this
 class GoToHell(Exception):
     """Exception"""
-    print("Why are you gay")
 
 # Lists
 MORSE = ['/', '.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....', '..', '.---',
@@ -76,7 +75,9 @@ while EXIT_STATUS is False:
         EXIT_STATUS = str(input("Do you want to continue? (y/n) "))
         if EXIT_STATUS.lower() == 'y':
             EXIT_STATUS = False
+            break
         elif EXIT_STATUS.lower() == 'n':
             EXIT_STATUS = True
+            break
         else:
             print("Invalid input. Please enter 'y' or 'n'.")
